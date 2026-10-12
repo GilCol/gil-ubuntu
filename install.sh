@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
-sudo apt update
-sudo apt install -y stow tmux git curl zsh neovim xclip ripgrep luarocks
+sudo snap install nvim --classic
 
-luarocks install tree-sitter-cli
+sudo apt update
+sudo apt install -y stow tmux git curl zsh xclip ripgrep luarocks
+
+sudo luarocks install tree-sitter-cli
 
 # Stow list - Add more stow configs here e.g nvim
 stow --dir=stow --target="$HOME" tmux
